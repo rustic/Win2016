@@ -4,9 +4,12 @@
 ### To build:
 
 This configuration builds the packer artifacts in a custom directory which can be set as an enviroment variable. To build the box run:
-```export PACKER_CACHE_DIR=$HOME/packer_cache
+
+```
+export PACKER_CACHE_DIR=$HOME/packer_cache
 packer build -var-file=vars.json windows_server_2016.json
 ```
+
 ###To Do:
 Find a more graceful way of specifying the output directory between the environment variable and vars.json. You could of course remove the references to these altogether and the output will be relative to where packer is run.
 
